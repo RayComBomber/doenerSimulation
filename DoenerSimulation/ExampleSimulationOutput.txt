@@ -1,0 +1,397 @@
+﻿Döner Simulation:
+Group 0 with 5 customers has arrived.
+Customer 0.0 gets food made.
+Customer 0.1 gets food made.
+Customer 0.2 gets food made.
+Customer 0.3 is queued.
+Customer 0.4 is queued.
+Customer 0.0 got his food.
+Customer 0.3 gets food made.
+Customer 0.0 waits for his group.
+Customer 0.1 got his food.
+Customer 0.1 waits for his group.
+Customer 0.4 gets food made.
+Customer 0.2 got his food.
+Customer 0.2 waits for his group.
+Group 1 with 4 customers has arrived.
+Customer 1.0 gets food made.
+Customer 1.1 is queued.
+Customer 1.2 is queued.
+Customer 1.3 is queued.
+Customer 0.3 got his food.
+Customer 0.3 waits for his group.
+Customer 1.1 gets food made.
+Customer 0.4 got his food.
+Customer 1.2 gets food made.
+Customer 0.4 leaves the store with his group.
+Customer 0.3 leaves the store with his group.
+Customer 0.2 leaves the store with his group.
+Customer 0.1 leaves the store with his group.
+Customer 0.0 leaves the store with his group.
+Customer 1.0 got his food.
+Customer 1.0 waits for his group.
+Customer 1.3 gets food made.
+Group 2 with 5 customers has arrived.
+Customer 2.0 is queued.
+Customer 2.1 is queued.
+Customer 2.2 is queued.
+Customer 2.4 is queued.
+Customer 2.3 is queued.
+Customer 1.1 got his food.
+Customer 1.1 waits for his group.
+Customer 2.0 gets food made.
+Customer 1.3 got his food.
+Customer 1.3 waits for his group.
+Customer 2.1 gets food made.
+Group 3 with 5 customers has arrived.
+Customer 3.0 is queued.
+Customer 3.1 is queued.
+Customer 3.2 is queued.
+Customer 3.3 is queued.
+Customer 3.4 is queued.
+Customer 1.2 got his food.
+Customer 1.2 leaves the store with his group.
+Customer 2.2 gets food made.
+Customer 1.3 leaves the store with his group.
+Customer 1.1 leaves the store with his group.
+Customer 1.0 leaves the store with his group.
+Customer 2.0 got his food.
+Customer 2.0 waits for his group.
+Customer 2.4 gets food made.
+Customer 2.1 got his food.
+Customer 2.1 waits for his group.
+Customer 2.3 gets food made.
+Group 4 with 5 customers has arrived.
+Customer 4.0 is queued.
+Customer 4.1 is queued.
+Customer 4.2 is queued.
+Customer 4.3 is queued.
+Customer 4.4 is queued.
+Customer 2.2 got his food.
+Customer 2.2 waits for his group.
+Customer 3.0 gets food made.
+Customer 2.4 got his food.
+Customer 2.4 waits for his group.
+Customer 3.1 gets food made.
+Customer 3.0 got his food.
+Customer 3.0 waits for his group.
+Customer 3.2 gets food made.
+Group 5 with 3 customers has arrived.
+Customer 5.0 is queued.
+Customer 5.1 is queued.
+Customer 5.2 is queued.
+Customer 2.3 got his food.
+Customer 2.3 leaves the store with his group.
+Customer 3.3 gets food made.
+Customer 2.4 leaves the store with his group.
+Customer 2.2 leaves the store with his group.
+Customer 2.1 leaves the store with his group.
+Customer 2.0 leaves the store with his group.
+Customer 3.3 got his food.
+Customer 3.3 waits for his group.
+Customer 3.4 gets food made.
+Group 6 with 5 customers has arrived.
+Customer 6.0 is queued.
+Customer 6.2 is queued.
+Customer 6.4 is queued.
+Customer 6.1 is queued.
+Customer 6.3 is queued.
+Customer 3.1 got his food.
+Customer 3.1 waits for his group.
+Customer 4.0 gets food made.
+Customer 3.2 got his food.
+Customer 3.2 waits for his group.
+Customer 4.1 gets food made.
+Group 7 with 2 customers has arrived.
+Customer 7.0 is queued.
+Customer 7.1 is queued.
+Customer 4.1 got his food.
+Customer 4.1 waits for his group.
+Customer 4.2 gets food made.
+Customer 3.4 got his food.
+Customer 3.4 leaves the store with his group.
+Customer 4.3 gets food made.
+Customer 3.2 leaves the store with his group.
+Customer 3.1 leaves the store with his group.
+Customer 3.3 leaves the store with his group.
+Customer 3.0 leaves the store with his group.
+Customer 4.0 got his food.
+Customer 4.0 waits for his group.
+Customer 4.4 gets food made.
+Customer 4.2 got his food.
+Customer 4.2 waits for his group.
+Customer 5.0 gets food made.
+Group 8 with 5 customers has arrived.
+Customer 8.0 is queued.
+Customer 8.1 is queued.
+Customer 8.2 is queued.
+Customer 8.3 is queued.
+Customer 8.4 is queued.
+Customer 4.3 got his food.
+Customer 4.3 waits for his group.
+Customer 5.1 gets food made.
+Customer 4.4 got his food.
+Customer 4.4 leaves the store with his group.
+Customer 5.2 gets food made.
+Customer 4.3 leaves the store with his group.
+Customer 4.2 leaves the store with his group.
+Customer 4.0 leaves the store with his group.
+Customer 4.1 leaves the store with his group.
+Customer 5.0 got his food.
+Customer 6.0 gets food made.
+Customer 5.0 waits for his group.
+Group 9 with 4 customers has arrived.
+Customer 9.0 is queued.
+Customer 9.1 is queued.
+Customer 9.2 is queued.
+Customer 9.3 is queued.
+Customer 5.1 got his food.
+Customer 5.1 waits for his group.
+Customer 6.2 gets food made.
+Customer 5.2 got his food.
+Customer 6.4 gets food made.
+Customer 5.2 leaves the store with his group.
+Customer 5.1 leaves the store with his group.
+Customer 5.0 leaves the store with his group.
+Group 10 with 5 customers has arrived.
+Customer 10.0 is queued.
+Customer 10.1 is queued.
+Customer 10.2 is queued.
+Customer 10.3 is queued.
+Customer 10.4 is queued.
+Customer 6.0 got his food.
+Customer 6.0 waits for his group.
+Customer 6.1 gets food made.
+Customer 6.4 got his food.
+Customer 6.4 waits for his group.
+Customer 6.3 gets food made.
+Customer 6.2 got his food.
+Customer 6.2 waits for his group.
+Customer 7.0 gets food made.
+Group 11 with 2 customers has arrived.
+Customer 11.0 is queued.
+Customer 11.1 is queued.
+Customer 6.1 got his food.
+Customer 6.1 waits for his group.
+Customer 7.1 gets food made.
+Customer 6.3 got his food.
+Customer 8.0 gets food made.
+Customer 6.3 leaves the store with his group.
+Customer 6.1 leaves the store with his group.
+Customer 6.2 leaves the store with his group.
+Customer 6.4 leaves the store with his group.
+Customer 6.0 leaves the store with his group.
+Customer 7.0 got his food.
+Customer 7.0 waits for his group.
+Customer 8.1 gets food made.
+Group 12 with 5 customers has arrived.
+Customer 12.0 is queued.
+Customer 12.1 is queued.
+Customer 12.2 is queued.
+Customer 12.3 is queued.
+Customer 12.4 is queued.
+Customer 7.1 got his food.
+Customer 8.2 gets food made.
+Customer 7.1 leaves the store with his group.
+Customer 7.0 leaves the store with his group.
+Customer 8.0 got his food.
+Customer 8.0 waits for his group.
+Customer 8.3 gets food made.
+Group 13 with 2 customers has arrived.
+Customer 13.0 is queued.
+Customer 13.1 is queued.
+Customer 8.1 got his food.
+Customer 8.1 waits for his group.
+Customer 8.4 gets food made.
+Customer 8.2 got his food.
+Customer 8.2 waits for his group.
+Customer 9.0 gets food made.
+Customer 8.3 got his food.
+Customer 8.3 waits for his group.
+Customer 9.1 gets food made.
+Group 14 with 2 customers has arrived.
+Customer 14.0 is queued.
+Customer 14.1 is queued.
+Customer 8.4 got his food.
+Customer 9.2 gets food made.
+Customer 8.4 leaves the store with his group.
+Customer 8.3 leaves the store with his group.
+Customer 8.2 leaves the store with his group.
+Customer 8.1 leaves the store with his group.
+Customer 8.0 leaves the store with his group.
+Customer 9.0 got his food.
+Customer 9.0 waits for his group.
+Customer 9.3 gets food made.
+Customer 9.1 got his food.
+Customer 9.1 waits for his group.
+Customer 10.0 gets food made.
+Customer 9.2 got his food.
+Customer 9.2 waits for his group.
+Customer 10.1 gets food made.
+Group 15 with 5 customers has arrived.
+Customer 15.0 is queued.
+Customer 15.1 is queued.
+Customer 15.2 is queued.
+Customer 15.3 is queued.
+Customer 15.4 is queued.
+Customer 9.3 got his food.
+Customer 9.3 leaves the store with his group.
+Customer 10.2 gets food made.
+Customer 9.2 leaves the store with his group.
+Customer 9.1 leaves the store with his group.
+Customer 9.0 leaves the store with his group.
+Customer 10.0 got his food.
+Customer 10.0 waits for his group.
+Customer 10.3 gets food made.
+Group 16 with 4 customers has arrived.
+Customer 16.0 is queued.
+Customer 16.1 is queued.
+Customer 16.2 is queued.
+Customer 16.3 is queued.
+Customer 10.1 got his food.
+Customer 10.1 waits for his group.
+Customer 10.4 gets food made.
+Customer 10.3 got his food.
+Customer 10.3 waits for his group.
+Customer 11.0 gets food made.
+Group 17 with 4 customers has arrived.
+Customer 17.0 is queued.
+Customer 17.1 is queued.
+Customer 17.2 is queued.
+Customer 17.3 is queued.
+Customer 10.2 got his food.
+Customer 10.2 waits for his group.
+Customer 11.1 gets food made.
+Customer 10.4 got his food.
+Customer 10.4 leaves the store with his group.
+Customer 12.0 gets food made.
+Customer 10.2 leaves the store with his group.
+Customer 10.3 leaves the store with his group.
+Customer 10.1 leaves the store with his group.
+Customer 10.0 leaves the store with his group.
+Group 18 with 4 customers has arrived.
+Customer 18.0 is queued.
+Customer 18.1 is queued.
+Customer 18.2 is queued.
+Customer 18.3 is queued.
+Customer 11.0 got his food.
+Customer 11.0 waits for his group.
+Customer 12.1 gets food made.
+Customer 11.1 got his food.
+Customer 11.1 leaves the store with his group.
+Customer 12.2 gets food made.
+Customer 11.0 leaves the store with his group.
+Customer 12.0 got his food.
+Customer 12.0 waits for his group.
+Customer 12.3 gets food made.
+Group 19 with 4 customers has arrived.
+Customer 19.0 is queued.
+Customer 19.1 is queued.
+Customer 19.2 is queued.
+Customer 19.3 is queued.
+Customer 12.1 got his food.
+Customer 12.4 gets food made.
+Customer 12.1 waits for his group.
+Customer 12.3 got his food.
+Customer 12.3 waits for his group.
+Customer 13.0 gets food made.
+Customer 12.2 got his food.
+Customer 12.2 waits for his group.
+Customer 13.1 gets food made.
+Customer 12.4 got his food.
+Customer 12.4 leaves the store with his group.
+Customer 14.0 gets food made.
+Customer 12.2 leaves the store with his group.
+Customer 12.3 leaves the store with his group.
+Customer 12.1 leaves the store with his group.
+Customer 12.0 leaves the store with his group.
+Customer 13.1 got his food.
+Customer 13.1 waits for his group.
+Customer 14.1 gets food made.
+Customer 13.0 got his food.
+Customer 13.0 leaves the store with his group.
+Customer 15.0 gets food made.
+Customer 13.1 leaves the store with his group.
+Customer 14.0 got his food.
+Customer 14.0 waits for his group.
+Customer 15.1 gets food made.
+Customer 14.1 got his food.
+Customer 14.1 leaves the store with his group.
+Customer 15.2 gets food made.
+Customer 14.0 leaves the store with his group.
+Customer 15.1 got his food.
+Customer 15.1 waits for his group.
+Customer 15.3 gets food made.
+Customer 15.0 got his food.
+Customer 15.0 waits for his group.
+Customer 15.4 gets food made.
+Customer 15.2 got his food.
+Customer 15.2 waits for his group.
+Customer 16.0 gets food made.
+Customer 15.3 got his food.
+Customer 15.3 waits for his group.
+Customer 16.1 gets food made.
+Customer 15.4 got his food.
+Customer 15.4 leaves the store with his group.
+Customer 16.2 gets food made.
+Customer 15.3 leaves the store with his group.
+Customer 15.2 leaves the store with his group.
+Customer 15.0 leaves the store with his group.
+Customer 15.1 leaves the store with his group.
+Customer 16.0 got his food.
+Customer 16.0 waits for his group.
+Customer 16.3 gets food made.
+Customer 16.1 got his food.
+Customer 16.1 waits for his group.
+Customer 17.0 gets food made.
+Customer 16.2 got his food.
+Customer 16.2 waits for his group.
+Customer 17.1 gets food made.
+Customer 17.0 got his food.
+Customer 17.0 waits for his group.
+Customer 17.2 gets food made.
+Customer 16.3 got his food.
+Customer 16.3 leaves the store with his group.
+Customer 17.3 gets food made.
+Customer 16.2 leaves the store with his group.
+Customer 16.1 leaves the store with his group.
+Customer 16.0 leaves the store with his group.
+Customer 17.1 got his food.
+Customer 17.1 waits for his group.
+Customer 18.0 gets food made.
+Customer 17.3 got his food.
+Customer 17.3 waits for his group.
+Customer 18.1 gets food made.
+Customer 17.2 got his food.
+Customer 18.2 gets food made.
+Customer 17.2 leaves the store with his group.
+Customer 17.3 leaves the store with his group.
+Customer 17.1 leaves the store with his group.
+Customer 17.0 leaves the store with his group.
+Customer 18.0 got his food.
+Customer 18.0 waits for his group.
+Customer 18.3 gets food made.
+Customer 18.1 got his food.
+Customer 18.1 waits for his group.
+Customer 19.0 gets food made.
+Customer 18.2 got his food.
+Customer 18.2 waits for his group.
+Customer 19.1 gets food made.
+Customer 18.3 got his food.
+Customer 18.3 leaves the store with his group.
+Customer 19.2 gets food made.
+Customer 18.2 leaves the store with his group.
+Customer 18.1 leaves the store with his group.
+Customer 18.0 leaves the store with his group.
+Customer 19.0 got his food.
+Customer 19.0 waits for his group.
+Customer 19.3 gets food made.
+Customer 19.1 got his food.
+Customer 19.1 waits for his group.
+Customer 19.2 got his food.
+Customer 19.2 waits for his group.
+Customer 19.3 got his food.
+Customer 19.3 leaves the store with his group.
+Customer 19.2 leaves the store with his group.
+Customer 19.1 leaves the store with his group.
+Customer 19.0 leaves the store with his group.
