@@ -1,5 +1,10 @@
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class CustomerGroup {
+	
+	private final ReentrantLock  lock = new ReentrantLock ();
+	private final Condition condition = lock.newCondition();
 	
 	private final int groupCount;
 	private int cusomersCountReadyToLeave;
@@ -11,27 +16,27 @@ public class CustomerGroup {
 		this.groupCount = customerCount;
 		this.store = store;
 		this.cusomersCountReadyToLeave = 0;
-		init();
-	}
-	
-	private void init(){
-		for(int customerNumber = 0; customerNumber < groupCount; customerNumber++){
-			Customer newCostomer = new Customer(groupId, customerNumber, store, this);
-			newCostomer.start();
-		}
 	}
 	
 	
-	public synchronized void goHome(Customer customer){
-		cusomersCountReadyToLeave++;
-		while(cusomersCountReadyToLeave < groupCount){
-			try {
-				System.out.println(customer.toString() + " waits for his group.");
-				wait();
-			} catch (InterruptedException e) {}
+	public void goHome(Customer customer){
+		lock.lock();
+		try{
+			cusomersCountReadyToLeave++;
+			
+			
+			while(cusomersCountReadyToLeave < groupCount){
+				try {
+					System.out.println(customer.toString() + " waits for his group.");
+					condition.await();
+				} catch (InterruptedException e) {}
+			}
+			condition.signalAll();
+			System.out.println(customer.toString() + " leaves the store with his group.");
 		}
-		notifyAll();
-		System.out.println(customer.toString() + " leaves the store with his group.");
+		finally{
+			lock.unlock();
+		}
 	}
 
 }

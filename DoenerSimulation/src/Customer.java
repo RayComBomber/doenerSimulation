@@ -1,6 +1,6 @@
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Customer extends Thread {
+public class Customer implements Runnable {
 
 	private static final int TIME_FOR_GETTING_FOOD_MIN = 4000;
 	private static final int TIME_FOR_GETTING_FOOD_MAX = 7000;
@@ -11,7 +11,6 @@ public class Customer extends Thread {
 	private CustomerGroup customerGroup;
 	
 	public Customer(int groupNumber, int number, DoenerStore store, CustomerGroup customerGroup){
-		super(groupNumber + "." + number);
 		this.number = number;
 		this.groupNumber = groupNumber;
 		this.store = store;
