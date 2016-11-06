@@ -10,6 +10,7 @@ public class CustomerGroup {
 	private int cusomersCountReadyToLeave;
 	private int groupId;
 	private DoenerStore store;
+	private static int globalGroupId = 0;
 	
 	public CustomerGroup(int groupId, int customerCount, DoenerStore store){
 		this.groupId = groupId;
@@ -38,5 +39,16 @@ public class CustomerGroup {
 			lock.unlock();
 		}
 	}
+	
+	
+	public static synchronized int getGlobalGroupId() {
+		return globalGroupId;
+	}
+
+
+	public static synchronized void incrementGlobalGroupId() {
+		CustomerGroup.globalGroupId += 1;
+	}
+
 
 }

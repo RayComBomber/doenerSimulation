@@ -1,6 +1,8 @@
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
 public class DonerSimulation {
 
@@ -10,7 +12,9 @@ public class DonerSimulation {
 	private static final int CUSTOMER_COUNT_MAX = 5;
 	private static final int TIME_BETWEEN_GROUPS = 5000;
 	
+	private static ScheduledExecutorService schedulePool =  Executors.newScheduledThreadPool(1);
 	private static Executor pool = Executors.newCachedThreadPool();
+	
 	
 	public static void main(String[] args) {
 		System.out.println("Döner Simulation:");
@@ -19,7 +23,26 @@ public class DonerSimulation {
 		DoenerStore store = new DoenerStore(EMPLOYEE_COUNT);
 		
 		// Spawn Groups
-		for(int groupId = 0; groupId < GROUP_COUNT; groupId++){
+//		for(int groupId = 0; groupId < GROUP_COUNT; groupId++){
+//			
+//			int customerCount = ThreadLocalRandom.current().nextInt(CUSTOMER_COUNT_MIN, CUSTOMER_COUNT_MAX + 1);
+//			CustomerGroup group = new CustomerGroup(groupId, customerCount, store);
+//			System.out.println("Group " + groupId + " with " + customerCount + " customers has arrived.");
+//			
+//			// Customer creation
+//			for(int customerNumber = 0; customerNumber < customerCount; customerNumber++){
+//				Customer newCostomer = new Customer(groupId, customerNumber, store, group);
+//				pool.execute(newCostomer);
+//			}
+//						
+//			try {
+//				Thread.sleep(TIME_BETWEEN_GROUPS);
+//			} catch (InterruptedException e) {}
+//		}
+		
+		
+		schedulePool.scheduleAtFixedRate(() -> {
+			int groupId = CustomerGroup.getGlobalGroupId();
 			
 			int customerCount = ThreadLocalRandom.current().nextInt(CUSTOMER_COUNT_MIN, CUSTOMER_COUNT_MAX + 1);
 			CustomerGroup group = new CustomerGroup(groupId, customerCount, store);
@@ -30,11 +53,9 @@ public class DonerSimulation {
 				Customer newCostomer = new Customer(groupId, customerNumber, store, group);
 				pool.execute(newCostomer);
 			}
-						
-			try {
-				Thread.sleep(TIME_BETWEEN_GROUPS);
-			} catch (InterruptedException e) {}
-		}
+			CustomerGroup.incrementGlobalGroupId();
+			
+		}, 0, TIME_BETWEEN_GROUPS, TimeUnit.MILLISECONDS);
 	
 	}
 
