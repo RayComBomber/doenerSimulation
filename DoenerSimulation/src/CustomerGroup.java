@@ -9,13 +9,11 @@ public class CustomerGroup {
 	private final int groupCount;
 	private int cusomersCountReadyToLeave;
 	private int groupId;
-	private DoenerStore store;
 	private static int globalGroupId = 0;
 	
 	public CustomerGroup(int groupId, int customerCount, DoenerStore store){
 		this.groupId = groupId;
 		this.groupCount = customerCount;
-		this.store = store;
 		this.cusomersCountReadyToLeave = 0;
 	}
 	

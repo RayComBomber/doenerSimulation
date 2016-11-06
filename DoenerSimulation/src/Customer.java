@@ -20,7 +20,9 @@ public class Customer implements Runnable {
 	
 	@Override
 	public void run(){
-		store.queueForFood(this);
+		try {
+			store.queueForFood(this);
+		} catch (InterruptedException e) {}
 		
 		int timeForGettingFood = ThreadLocalRandom.current().nextInt(TIME_FOR_GETTING_FOOD_MIN, TIME_FOR_GETTING_FOOD_MAX + 1);
 		try {

@@ -1,36 +1,22 @@
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.Semaphore;
 
 public class DoenerStore {
 
-	private final ReentrantLock  lock = new ReentrantLock ();
-	private final Condition condition = lock.newCondition();
-	private int freeEmployees;
+	private final Semaphore employeeSemaphore;
 	
 	public DoenerStore(int employees){
-		this.freeEmployees = employees;
+		this.employeeSemaphore = new Semaphore(employees);
 	}
 
 	/**
 	 * Customer queues for food. If an employee is free, he will get food fast. Else, he will be queued.
 	 * @param customer
+	 * @throws InterruptedException 
 	 */
-	public void queueForFood(Customer customer) {
-		lock.lock();
-		try{
-			while (freeEmployees == 0) {
-				try {
-					System.out.println(customer.toString() + " is queued.");
-					condition.await();
-				} catch (InterruptedException e) {}
-			}
-	
-			freeEmployees--;
-			System.out.println(customer.toString() + " gets food made.");
-		}
-		finally{
-			lock.unlock();
-		}
+	public void queueForFood(Customer customer) throws InterruptedException {
+		System.out.println(customer.toString() + " is queued.");
+		employeeSemaphore.acquire();
+		System.out.println(customer.toString() + " gets food made.");
 	}
 	
 	
@@ -39,15 +25,8 @@ public class DoenerStore {
 	 * @param customer 
 	 */
 	public void getRequestedFood(Customer customer){
-		lock.lock();
-		try{
-			freeEmployees++;
-			System.out.println(customer.toString() + " got his food.");
-			condition.signal();
-		}
-		finally{
-			lock.unlock();
-		}
+		employeeSemaphore.release();
+		System.out.println(customer.toString() + " got his food.");
 	}
 
 }
