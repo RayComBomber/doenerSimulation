@@ -1,40 +1,41 @@
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class CustomerGroup {
 	
-	private final ReentrantLock  lock = new ReentrantLock ();
-	private final Condition condition = lock.newCondition();
-	
-	private final int groupCount;
-	private int cusomersCountReadyToLeave;
-	private int groupId;
+	private CountDownLatch latch;
+	private AtomicBoolean isGroupComplete;
 	private static int globalGroupId = 0;
+	private final boolean isGoldGroup;
 	
-	public CustomerGroup(int groupId, int customerCount, DoenerStore store){
-		this.groupId = groupId;
-		this.groupCount = customerCount;
-		this.cusomersCountReadyToLeave = 0;
+	
+	
+	public CustomerGroup(int groupId, int customerCount, DoenerStore store, boolean isGoldGroup){
+//		this.groupId = groupId;
+		this.latch = new CountDownLatch(customerCount);
+		this.isGroupComplete = new AtomicBoolean(false);
+		this.isGoldGroup = isGoldGroup;
+
+		String groupPrefix = getGroupPrefix(isGoldGroup);
+		System.out.println(groupPrefix + groupId + " with " + customerCount + " customers has arrived.");
 	}
+
 	
 	
 	public void goHome(Customer customer){
-		lock.lock();
-		try{
-			cusomersCountReadyToLeave++;
-			
-			
-			while(cusomersCountReadyToLeave < groupCount){
-				try {
-					System.out.println(customer.toString() + " waits for his group.");
-					condition.await();
-				} catch (InterruptedException e) {}
-			}
-			condition.signalAll();
-			System.out.println(customer.toString() + " leaves the store with his group.");
+		System.out.println(customer.toString() + " waits for his group.");
+		this.latch.countDown();
+		try {
+			this.latch.await();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		finally{
-			lock.unlock();
+		
+		// Print this message just one time
+		if(this.isGroupComplete.getAndSet(true) == false){
+			String groupPrefix = getGroupPrefix(isGoldGroup);
+			System.out.println(groupPrefix + customer.getGroupNumber() + " leaves the store.");
 		}
 	}
 	
@@ -46,6 +47,10 @@ public class CustomerGroup {
 
 	public static synchronized void incrementGlobalGroupId() {
 		CustomerGroup.globalGroupId += 1;
+	}
+	
+	private String getGroupPrefix(boolean isGoldGroup) {
+		return isGoldGroup ? "GOLD-Group " : "Group ";
 	}
 
 
